@@ -8,8 +8,8 @@ import javax.swing.JTextArea;
 
 public class EncMain extends JFrame{
 	private static final long serialVersionUID = 1L;
-	public static JTextArea text1;
-	public static JTextArea text2;
+	private static JTextArea text1;
+	private static JTextArea text2;
 	/**
 	 * @param args
 	 */
@@ -25,8 +25,8 @@ public class EncMain extends JFrame{
 
 	    JPanel p = new JPanel();
 
-	    text1 = new JTextArea("password‚ğ“ü—Í", 5, 20);
-	    text2 = new JTextArea("ˆÃ†‰»‚³‚ê‚½Œ‹‰Ê", 5, 20);
+	    text1 = new JTextArea("“ü—Í", 5, 20);
+	    text2 = new JTextArea("Œ‹‰Ê", 5, 20);
 		JButton button = new JButton("Encrypt");
 		button.addActionListener(new myListner());
 
@@ -38,4 +38,13 @@ public class EncMain extends JFrame{
 	    Container contentPane = getContentPane();
 	    contentPane.add(p);
 	}
+	
+	public static String getText1(){
+		return text1.getText();
+	}
+	
+	public static void setText2(String setStr){
+		text2.setText(setStr);
+	}
+	
 }

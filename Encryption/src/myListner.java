@@ -7,7 +7,7 @@ public class myListner implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		String str1 = EncMain.text1.getText();
+		String str1 = EncMain.getText1();
 		System.out.println("str1: " + str1);
 		
 		byte[] byteStr1 = str1.getBytes();
@@ -22,7 +22,7 @@ public class myListner implements ActionListener {
 			String str2 = toHexString(byteStr2);
 			System.out.println("str2: " + str2);
 			
-			EncMain.text2.setText(str2);
+			EncMain.setText2(str2);
 		}
 		catch (NoSuchAlgorithmException e1) {
 			e1.printStackTrace();
